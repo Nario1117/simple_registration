@@ -15,7 +15,7 @@ void rewrite(struct User *users) {
             printf("%s%d%s%s\n", "User number ", i, ": ", users[i].name);
         }
     }
-scanf("%d", &rewrite);
+    scanf("%d", &rewrite);
 
     char name[1000];
     char surname[1000];
@@ -92,7 +92,10 @@ int main(void) {
                 break;
             case '4':
                 for (int i = 0; i < 30; ++i) {
-                    printf("%s%d%s%s\n", "This is name number ", i, ": ", user[i].name);
+                    if (strcmp(user[i].name, "") != 0) {
+                        printf("%s%d%s%s%s%s%s%s\n", "This is name number ", i, ": Name: ", user[i].name, ", Email: ",
+                               user[i].email, ", surname: ", user[i].surname);
+                    }
                 }
                 printf("%s", "Vypinam");
 
